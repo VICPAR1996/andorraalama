@@ -135,26 +135,34 @@ export function ParishMap({ compact = false, activeParish, onSelect }: ParishMap
               onPointerDown={() => !compact && handlePointerDown(p.id)}
               onPointerUp={() => !compact && handlePointerUp(p.id)}
             />
-            <AnimatePresence>
-              {(isHovered || isActive) && !compact && (
-                <motion.text
-                  x={p.labelX}
-                  y={p.labelY}
-                  textAnchor="middle"
-                  fill={isActive ? "oklch(72% 0.16 245)" : "rgba(255,255,255,0.7)"}
-                  fontSize={isActive ? "9" : "8"}
-                  fontFamily="var(--mono)"
-                  letterSpacing="0.05em"
-                  style={{ textTransform: "uppercase", pointerEvents: "none" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: dur.fast }}
-                >
-                  {p.label}
-                </motion.text>
-              )}
-            </AnimatePresence>
+            {!compact && (
+              <motion.text
+                x={p.labelX}
+                y={p.labelY}
+                textAnchor="middle"
+                fill={
+                  isActive
+                    ? "oklch(72% 0.16 245)"
+                    : isHovered
+                    ? "rgba(255,255,255,0.85)"
+                    : "rgba(255,255,255,0.45)"
+                }
+                fontSize={isActive ? "9" : "8"}
+                fontFamily="var(--mono)"
+                letterSpacing="0.05em"
+                style={{ textTransform: "uppercase", pointerEvents: "none" }}
+                animate={{
+                  fill: isActive
+                    ? "oklch(72% 0.16 245)"
+                    : isHovered
+                    ? "rgba(255,255,255,0.85)"
+                    : "rgba(255,255,255,0.45)",
+                }}
+                transition={{ duration: dur.fast }}
+              >
+                {p.label}
+              </motion.text>
+            )}
           </g>
         );
       })}
