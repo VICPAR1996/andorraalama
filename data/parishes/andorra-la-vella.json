@@ -1,0 +1,43 @@
+{
+  "id": "andorra-la-vella",
+  "name": { "ca": "Andorra la Vella", "es": "Andorra la Vieja", "en": "Andorra la Vella", "fr": "Andorre-la-Vieille" },
+  "slogan": { "ca": "Capital del Principat", "es": "Capital del Principado", "en": "Capital of the Principality", "fr": "Capitale de la Principauté" },
+  "population": 22886,
+  "area_km2": 12,
+  "capital": true,
+  "comu": {
+    "name": "Comú d'Andorra la Vella",
+    "url": "https://www.andorralavella.ad",
+    "logo": "/comu/andorra-la-vella.svg",
+    "address": "Plaça del Poble, s/n, AD500 Andorra la Vella",
+    "phone": "+376829129"
+  },
+  "emergency": [
+    { "kind": "police", "label": { "ca": "Policia", "es": "Policía", "en": "Police", "fr": "Police" }, "phone": "110", "hours": "24/7" },
+    { "kind": "firefighters", "label": { "ca": "Bombers", "es": "Bomberos", "en": "Fire Brigade", "fr": "Pompiers" }, "phone": "118", "hours": "24/7" },
+    { "kind": "emergency", "label": { "ca": "Emergències", "es": "Emergencias", "en": "Emergency", "fr": "Urgences" }, "phone": "112", "hours": "24/7" },
+    { "kind": "medical", "label": { "ca": "CASS Urgències", "es": "CASS Urgencias", "en": "CASS Emergency", "fr": "CASS Urgences" }, "phone": "+376871717", "hours": "24/7" },
+    { "kind": "comu", "label": { "ca": "Comú", "es": "Común", "en": "Parish Council", "fr": "Commun" }, "phone": "+376829129", "hours": "09:00–17:00" }
+  ],
+  "utilities": [
+    { "kind": "hospital", "label": { "ca": "SAAS – Hospital Nostra Senyora de Meritxell", "es": "SAAS – Hospital Nuestra Señora de Meritxell", "en": "SAAS Hospital", "fr": "Hôpital SAAS" }, "address": "Av. Fiter i Rossell, AD500", "phone": "+376871000" },
+    { "kind": "pharmacy", "label": { "ca": "Farmàcia Meritxell", "es": "Farmacia Meritxell", "en": "Meritxell Pharmacy", "fr": "Pharmacie Meritxell" }, "address": "Av. Meritxell 96, AD500" },
+    { "kind": "parking", "label": { "ca": "Pàrquing Plaça del Poble", "es": "Parking Plaza del Pueblo", "en": "Plaça del Poble Car Park", "fr": "Parking Place du Peuple" }, "address": "Plaça del Poble, AD500" },
+    { "kind": "ev", "label": { "ca": "Punt de càrrega EV – Av. Meritxell", "es": "Punto de carga EV", "en": "EV Charging – Av. Meritxell", "fr": "Borne EV – Av. Meritxell" }, "address": "Av. Meritxell, AD500" }
+  ],
+  "thingsToDo": [
+    { "id": "av-shopping", "category": "culture", "title": { "ca": "Av. Meritxell", "es": "Av. Meritxell", "en": "Av. Meritxell", "fr": "Av. Meritxell" }, "blurb": { "ca": "El cor comercial d'Andorra, perfecte per a la compra duty-free.", "es": "El corazón comercial de Andorra.", "en": "Andorra's commercial heart, ideal for duty-free shopping.", "fr": "Le cœur commercial d'Andorre." }, "image": { "src": "/img/av-meritxell.avif", "alt": "Avinguda Meritxell", "w": 800, "h": 1000 }, "season": "all" },
+    { "id": "barri-antic", "category": "culture", "title": { "ca": "Barri Antic", "es": "Barrio Antiguo", "en": "Old Quarter", "fr": "Vieux Quartier" }, "blurb": { "ca": "Carrers medievals, la Casa de la Vall i l'Església de Sant Esteve.", "es": "Calles medievales y la Casa de la Vall.", "en": "Medieval streets, Casa de la Vall and Sant Esteve church.", "fr": "Rues médiévales et Casa de la Vall." }, "image": { "src": "/img/barri-antic.avif", "alt": "Barri Antic d'Andorra la Vella", "w": 800, "h": 1000 }, "season": "all" },
+    { "id": "caldea", "category": "family", "title": { "ca": "Caldea", "es": "Caldea", "en": "Caldea", "fr": "Caldea" }, "blurb": { "ca": "El gran centre termal dels Pirineus, just a les portes d'Andorra la Vella.", "es": "El gran centro termal de los Pirineos.", "en": "The great thermal centre of the Pyrenees.", "fr": "Le grand centre thermal des Pyrénées." }, "image": { "src": "/img/caldea.avif", "alt": "Caldea termal", "w": 800, "h": 1000 }, "externalUrl": "https://www.caldea.com", "season": "all" }
+  ],
+  "rentals": [
+    { "provider": "idealista", "url": "https://www.idealista.com/geo/andorra-la-vella/" },
+    { "provider": "pisos.ad", "url": "https://www.pisos.ad/lloguer/andorra-la-vella/" }
+  ],
+  "fuelStations": [
+    { "id": "alv-01", "name": "Andorra Oil – Av. Meritxell", "address": "Av. Meritxell 10, AD500" },
+    { "id": "alv-02", "name": "Estació Pyrénées", "address": "Av. Príncep Benlloch 9, AD500" }
+  ],
+  "fuelPrices": { "gasoline95": 1.489, "diesel": 1.392, "updatedAt": "2026-05-13T08:00:00Z" },
+  "weather": { "temp": 14, "condition": "Sol", "icon": "sun" }
+}

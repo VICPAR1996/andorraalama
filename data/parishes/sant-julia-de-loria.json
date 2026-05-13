@@ -1,0 +1,37 @@
+{
+  "id": "sant-julia-de-loria",
+  "name": { "ca": "Sant Julià de Lòria", "es": "Sant Julià de Lòria", "en": "Sant Julià de Lòria", "fr": "Sant Julià de Lòria" },
+  "slogan": { "ca": "Porta del sud", "es": "Puerta del sur", "en": "Southern gateway", "fr": "Porte du sud" },
+  "population": 9217,
+  "area_km2": 61,
+  "comu": {
+    "name": "Comú de Sant Julià de Lòria",
+    "url": "https://www.santjulia.ad",
+    "logo": "/comu/sant-julia-de-loria.svg",
+    "address": "Av. Verge de Canòlich, 34, AD600 Sant Julià de Lòria",
+    "phone": "+376843020"
+  },
+  "emergency": [
+    { "kind": "police", "label": { "ca": "Policia", "es": "Policía", "en": "Police", "fr": "Police" }, "phone": "110", "hours": "24/7" },
+    { "kind": "firefighters", "label": { "ca": "Bombers", "es": "Bomberos", "en": "Fire Brigade", "fr": "Pompiers" }, "phone": "118", "hours": "24/7" },
+    { "kind": "emergency", "label": { "ca": "Emergències", "es": "Emergencias", "en": "Emergency", "fr": "Urgences" }, "phone": "112", "hours": "24/7" },
+    { "kind": "comu", "label": { "ca": "Comú de Sant Julià", "es": "Común de Sant Julià", "en": "Parish Council", "fr": "Commun de Sant Julià" }, "phone": "+376843020", "hours": "09:00–17:00" }
+  ],
+  "utilities": [
+    { "kind": "pharmacy", "label": { "ca": "Farmàcia Sant Julià", "es": "Farmacia Sant Julià", "en": "Sant Julià Pharmacy", "fr": "Pharmacie Sant Julià" }, "address": "Av. Verge de Canòlich, AD600" },
+    { "kind": "parking", "label": { "ca": "Pàrquing Sant Julià", "es": "Parking Sant Julià", "en": "Sant Julià Car Park", "fr": "Parking Sant Julià" }, "address": "Av. Francesc Cairat, AD600" }
+  ],
+  "thingsToDo": [
+    { "id": "naturlandia", "category": "family", "title": { "ca": "Naturlàndia", "es": "Naturlàndia", "en": "Naturlàndia", "fr": "Naturlàndia" }, "blurb": { "ca": "Parc de natura i aventura amb el tobotronc més llarg del món.", "es": "Parque de naturaleza y aventura con el tobotronc más largo del mundo.", "en": "Nature and adventure park with the world's longest alpine coaster.", "fr": "Parc nature et aventure avec le plus long tobotronc du monde." }, "image": { "src": "/img/naturlandia.avif", "alt": "Naturlàndia", "w": 800, "h": 1000 }, "externalUrl": "https://www.naturlandia.ad", "season": "all" },
+    { "id": "la-rabassa", "category": "nature", "title": { "ca": "La Rabassa", "es": "La Rabassa", "en": "La Rabassa", "fr": "La Rabassa" }, "blurb": { "ca": "Bosc de muntanya amb senderisme, bicicleta de muntanya i tir amb arc.", "es": "Bosque de montaña con senderismo y bicicleta de montaña.", "en": "Mountain forest with hiking, mountain biking and archery.", "fr": "Forêt de montagne avec randonnée et VTT." }, "image": { "src": "/img/la-rabassa.avif", "alt": "La Rabassa", "w": 800, "h": 1000 }, "season": "summer" }
+  ],
+  "rentals": [
+    { "provider": "idealista", "url": "https://www.idealista.com/geo/sant-julia-de-loria-andorra/" },
+    { "provider": "pisos.ad", "url": "https://www.pisos.ad/lloguer/sant-julia-de-loria/" }
+  ],
+  "fuelStations": [
+    { "id": "sjl-01", "name": "Estació Sant Julià", "address": "Av. Francesc Cairat 12, AD600" }
+  ],
+  "fuelPrices": { "gasoline95": 1.489, "diesel": 1.392, "updatedAt": "2026-05-13T08:00:00Z" },
+  "weather": { "temp": 16, "condition": "Sol", "icon": "sun" }
+}
