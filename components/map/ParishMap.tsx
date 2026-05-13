@@ -79,6 +79,7 @@ interface ParishMapProps {
   compact?: boolean;
   activeParish?: ParishId | null;
   onSelect?: (id: ParishId) => void;
+  onHover?: (id: ParishId | null) => void;
 }
 
 function TamarroHead({ color, size = 22 }: { color: string; size?: number }) {
@@ -96,7 +97,7 @@ function TamarroHead({ color, size = 22 }: { color: string; size?: number }) {
   );
 }
 
-export function ParishMap({ compact = false, activeParish, onSelect }: ParishMapProps) {
+export function ParishMap({ compact = false, activeParish, onSelect, onHover }: ParishMapProps) {
   const [hovered, setHovered] = useState<ParishId | null>(null);
   const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -141,8 +142,8 @@ export function ParishMap({ compact = false, activeParish, onSelect }: ParishMap
               }}
               animate={{ scale: isActive ? 1.02 : 1 }}
               transition={{ duration: dur.fast, ease: ease.standard }}
-              onPointerEnter={() => !compact && setHovered(p.id)}
-              onPointerLeave={() => !compact && setHovered(null)}
+              onPointerEnter={() => { if (!compact) { setHovered(p.id); onHover?.(p.id); } }}
+              onPointerLeave={() => { if (!compact) { setHovered(null); onHover?.(null); } }}
               onPointerDown={() => !compact && handlePointerDown(p.id)}
               onPointerUp={() => !compact && handlePointerUp(p.id)}
             />

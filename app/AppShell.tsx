@@ -48,6 +48,7 @@ export function AppShell({ parishes }: AppShellProps) {
       ) : (
         <DiscoveryView
           key="discovery"
+          parishes={parishes}
           onSelect={handleSelect}
           locale={locale}
           onLocaleChange={setLocale}
