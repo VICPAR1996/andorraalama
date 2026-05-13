@@ -4,6 +4,11 @@
   "slogan": { "ca": "Porta del sud", "es": "Puerta del sur", "en": "Southern gateway", "fr": "Porte du sud" },
   "population": 9217,
   "area_km2": 61,
+  "tamarro": {
+    "id": "lau",
+    "color": "#8e6db5",
+    "bio": { "ca": "Somniadeta i misteriosa, porta del sud i de l'aventura.", "es": "Soñadora y misteriosa, puerta del sur y la aventura.", "en": "Dreamy and mysterious, southern gateway to adventure.", "fr": "Rêveuse et mystérieuse, porte du sud et de l'aventure." }
+  },
   "comu": {
     "name": "Comú de Sant Julià de Lòria",
     "url": "https://www.santjulia.ad",

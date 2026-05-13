@@ -4,6 +4,11 @@
   "slogan": { "ca": "Termes i modernitat", "es": "Termas y modernidad", "en": "Thermal baths and modernity", "fr": "Thermes et modernité" },
   "population": 14985,
   "area_km2": 30,
+  "tamarro": {
+    "id": "caldes",
+    "color": "#efb13c",
+    "bio": { "ca": "Relaxada, calenta i sempre a punt per un bon bany.", "es": "Relajada, cálida y siempre lista para un buen baño.", "en": "Relaxed, warm and always ready for a thermal bath.", "fr": "Détendue, chaude et toujours prête pour un bon bain." }
+  },
   "comu": {
     "name": "Comú d'Escaldes-Engordany",
     "url": "https://www.e-e.ad",

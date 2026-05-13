@@ -23,20 +23,24 @@ export function LanguageSwitch({ locale, onChange }: LanguageSwitchProps) {
     <div className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="w-11 h-11 rounded-[14px] bg-surface-2 border border-line text-ink-dim font-mono text-[12px] flex items-center justify-center cursor-pointer"
+        className="w-11 h-11 rounded-[12px] bg-paper-2 border-2 border-ink text-ink font-mono text-[12px] font-bold flex items-center justify-center cursor-pointer"
+        style={{ boxShadow: "3px 3px 0 #2a1f17" }}
         aria-label="Canviar idioma"
       >
         {locale.toUpperCase()}
       </button>
       {open && (
-        <div className="absolute top-12 right-0 bg-surface border border-line rounded-[14px] overflow-hidden z-50 py-1">
+        <div
+          className="absolute top-13 right-0 bg-paper-2 border-2 border-ink rounded-[14px] overflow-hidden z-50 py-1"
+          style={{ boxShadow: "4px 4px 0 #2a1f17" }}
+        >
           {LOCALES.map((l) => (
             <button
               key={l.code}
               onClick={() => { onChange(l.code); setOpen(false); }}
               className={cn(
-                "block w-full px-4 py-2 text-left font-mono text-[12px] cursor-pointer hover:bg-surface-2",
-                l.code === locale ? "text-accent" : "text-ink-dim"
+                "block w-full px-4 py-2 text-left font-mono text-[12px] font-bold cursor-pointer hover:bg-paper",
+                l.code === locale ? "text-andy" : "text-ink-soft"
               )}
             >
               {l.label}

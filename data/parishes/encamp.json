@@ -4,6 +4,11 @@
   "slogan": { "ca": "Porta del Pas de la Casa", "es": "Puerta del Pas de la Casa", "en": "Gateway to Pas de la Casa", "fr": "Porte du Pas de la Casa" },
   "population": 11946,
   "area_km2": 93,
+  "tamarro": {
+    "id": "enko",
+    "color": "#6fa64a",
+    "bio": { "ca": "Aventurer de muntanya, sempre amb les botes posades.", "es": "Aventurero de montaña, siempre con las botas puestas.", "en": "Mountain adventurer, always with hiking boots on.", "fr": "Aventurier de montagne, toujours prêt à partir." }
+  },
   "comu": {
     "name": "Comú d'Encamp",
     "url": "https://www.encamp.ad",

@@ -4,6 +4,11 @@
   "slogan": { "ca": "La parròquia més verda", "es": "La parroquia más verde", "en": "The greenest parish", "fr": "La paroisse la plus verte" },
   "population": 4537,
   "area_km2": 90,
+  "tamarro": {
+    "id": "dino",
+    "color": "#b14536",
+    "bio": { "ca": "El savi del bosc, guarda secrets antics d'Ordino.", "es": "El sabio del bosque, guarda secretos antiguos de Ordino.", "en": "The forest's wise one, keeper of Ordino's ancient secrets.", "fr": "Le sage de la forêt, gardien des secrets d'Ordino." }
+  },
   "comu": {
     "name": "Comú d'Ordino",
     "url": "https://www.ordino.ad",

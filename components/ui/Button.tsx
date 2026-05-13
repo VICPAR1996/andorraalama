@@ -2,33 +2,25 @@ import { ButtonHTMLAttributes, forwardRef } from "react";
 import { cn } from "@/lib/cn";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "ghost" | "destructive" | "sos";
+  variant?: "primary" | "secondary" | "ghost" | "sos";
+  parishColor?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = "secondary", className, children, ...props }, ref) => {
+  ({ variant = "secondary", parishColor, className, children, style, ...props }, ref) => {
     return (
       <button
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center gap-2 rounded-full px-[18px] py-3 text-[14px] font-medium leading-none transition-all active:scale-[0.97]",
-          "min-h-[44px] cursor-pointer",
-          variant === "primary" && [
-            "bg-accent text-[#0a0a0b] border-transparent",
-            "shadow-[0_8px_30px_-10px_oklch(72%_0.16_245_/_0.6)]",
-          ],
-          variant === "secondary" && "bg-surface-2 border border-line-strong text-ink",
-          variant === "ghost" && "bg-transparent border border-line-strong text-ink",
-          variant === "destructive" && [
-            "bg-danger text-white border-transparent",
-            "shadow-[0_8px_30px_-10px_oklch(70%_0.18_25_/_0.6)]",
-          ],
-          variant === "sos" && [
-            "bg-danger text-white border-transparent w-14 h-14 rounded-[18px] text-xs font-semibold",
-            "shadow-[0_8px_30px_-10px_oklch(70%_0.18_25_/_0.6)]",
-          ],
+          "inline-flex items-center justify-center gap-2 rounded-[14px] px-5 py-3 text-[15px] font-bold border-2 border-ink cursor-pointer transition-transform active:translate-x-[2px] active:translate-y-[2px]",
+          "min-h-[44px]",
+          variant === "primary" && "bg-enko text-paper shadow-[4px_4px_0_#2a1f17] active:shadow-none",
+          variant === "secondary" && "bg-paper-2 text-ink shadow-[4px_4px_0_#2a1f17] active:shadow-none",
+          variant === "ghost" && "bg-transparent text-ink",
+          variant === "sos" && "bg-dino text-paper shadow-[4px_4px_0_#2a1f17] active:shadow-none",
           className
         )}
+        style={parishColor ? { background: parishColor, ...style } : style}
         {...props}
       >
         {children}

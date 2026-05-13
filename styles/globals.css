@@ -2,50 +2,50 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: var(--bg);
-  --color-bg-2: var(--bg-2);
-  --color-surface: var(--surface);
-  --color-surface-2: var(--surface-2);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-edge: var(--paper-edge);
   --color-ink: var(--ink);
-  --color-ink-dim: var(--ink-dim);
+  --color-ink-soft: var(--ink-soft);
   --color-ink-mute: var(--ink-mute);
-  --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
-  --color-accent-line: var(--accent-line);
-  --color-warn: var(--warn);
-  --color-danger: var(--danger);
-  --color-ok: var(--ok);
   --color-line: var(--line);
-  --color-line-strong: var(--line-strong);
+
+  --color-andy:   var(--andy);
+  --color-caldes: var(--caldes);
+  --color-enko:   var(--enko);
+  --color-massa:  var(--massa);
+  --color-dino:   var(--dino);
+  --color-nilo:   var(--nilo);
+  --color-lau:    var(--lau);
+
+  --color-sky:    var(--sky);
+  --color-moss:   var(--moss);
 
   --radius-sm: 8px;
   --radius-DEFAULT: 14px;
   --radius-lg: 22px;
 
-  --font-sans: var(--font-general), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-mono: var(--font-jb), ui-monospace, SFMono-Regular, monospace;
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-hand: var(--font-caveat), cursive;
+  --font-mono: var(--font-jb), ui-monospace, monospace;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "ss01", "cv11";
+  font-feature-settings: "ss01", "ss02";
+  line-height: 1.55;
+  overflow-x: hidden;
 }
 
-::selection {
-  background: var(--accent-soft);
-  color: var(--ink);
-}
+::selection { background: var(--caldes); color: var(--ink); }
 
 @media (prefers-reduced-motion: reduce) {
   * {

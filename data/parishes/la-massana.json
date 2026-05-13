@@ -4,6 +4,11 @@
   "slogan": { "ca": "Vallnord i natura", "es": "Vallnord y naturaleza", "en": "Vallnord and nature", "fr": "Vallnord et nature" },
   "population": 10020,
   "area_km2": 65,
+  "tamarro": {
+    "id": "massa",
+    "color": "#4a89a8",
+    "bio": { "ca": "Tranquil i zen, amb el Vallnord sempre al cap.", "es": "Tranquilo y zen, con el Vallnord siempre en mente.", "en": "Calm and zen, with Vallnord always on their mind.", "fr": "Calme et zen, toujours en pensant au Vallnord." }
+  },
   "comu": {
     "name": "Comú de la Massana",
     "url": "https://www.lamassana.ad",

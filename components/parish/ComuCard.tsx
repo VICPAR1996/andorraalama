@@ -1,6 +1,5 @@
-import { ExternalLink, Building2, Phone } from "lucide-react";
+import { ExternalLink, Phone } from "lucide-react";
 import { Parish, Locale } from "@/lib/types";
-import { Card } from "@/components/ui/Card";
 
 interface ComuCardProps {
   parish: Parish;
@@ -8,40 +7,48 @@ interface ComuCardProps {
 }
 
 export function ComuCard({ parish, locale }: ComuCardProps) {
-  const { comu } = parish;
+  const { comu, tamarro } = parish;
 
   return (
-    <Card>
+    <div
+      className="bg-paper-2 border-2 border-ink rounded-[22px] p-4"
+      style={{ boxShadow: "5px 5px 0 #2a1f17" }}
+    >
       <div className="text-[11px] font-mono text-ink-mute tracking-[0.08em] uppercase mb-3">
         Comú
       </div>
-      <div className="flex items-start gap-3">
-        <div className="w-10 h-10 rounded-[10px] bg-accent-soft border border-accent-line flex items-center justify-center shrink-0">
-          <Building2 size={18} strokeWidth={1.75} className="text-accent" />
+      <div className="flex items-start gap-3 mb-4">
+        <div
+          className="w-11 h-11 rounded-[12px] border-2 border-ink flex items-center justify-center shrink-0 text-[22px]"
+          style={{ background: tamarro.color }}
+        >
+          🏛️
         </div>
         <div className="min-w-0">
-          <div className="text-[14px] font-semibold text-ink truncate">{comu.name}</div>
-          <div className="text-[12px] text-ink-dim mt-0.5 truncate">{comu.address}</div>
+          <div className="text-[14px] font-bold text-ink truncate">{comu.name}</div>
+          <div className="text-[12px] text-ink-soft mt-0.5 truncate">{comu.address}</div>
         </div>
       </div>
-      <div className="flex gap-2 mt-3">
+      <div className="flex gap-2">
         <a
           href={comu.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 rounded-full py-2.5 text-[13px] font-medium bg-surface-2 border border-line text-ink"
+          className="flex-1 flex items-center justify-center gap-2 rounded-[12px] py-2.5 text-[13px] font-bold border-2 border-ink text-paper active:translate-x-[1px] active:translate-y-[1px] transition-transform"
+          style={{ background: tamarro.color, boxShadow: "3px 3px 0 #2a1f17" }}
         >
-          <ExternalLink size={14} strokeWidth={1.75} />
+          <ExternalLink size={14} strokeWidth={2.5} />
           Web oficial
         </a>
         <a
           href={`tel:${comu.phone}`}
-          className="flex-1 flex items-center justify-center gap-2 rounded-full py-2.5 text-[13px] font-medium bg-surface-2 border border-line text-ink"
+          className="flex-1 flex items-center justify-center gap-2 rounded-[12px] py-2.5 text-[13px] font-bold border-2 border-ink bg-paper text-ink active:translate-x-[1px] active:translate-y-[1px] transition-transform"
+          style={{ boxShadow: "3px 3px 0 #2a1f17" }}
         >
-          <Phone size={14} strokeWidth={1.75} />
+          <Phone size={14} strokeWidth={2.5} />
           Trucar
         </a>
       </div>
-    </Card>
+    </div>
   );
 }

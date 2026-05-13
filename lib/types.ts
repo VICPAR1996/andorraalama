@@ -1,5 +1,7 @@
 export type Locale = "ca" | "es" | "en" | "fr";
 
+export type TamarroId = "andy" | "caldes" | "enko" | "massa" | "dino" | "nilo" | "lau";
+
 export type ParishId =
   | "andorra-la-vella"
   | "escaldes-engordany"
@@ -70,6 +72,11 @@ export interface Parish {
   population: number;
   area_km2: number;
   capital?: boolean;
+  tamarro: {
+    id: TamarroId;
+    color: string;
+    bio: Record<Locale, string>;
+  };
   comu: {
     name: string;
     url: string;

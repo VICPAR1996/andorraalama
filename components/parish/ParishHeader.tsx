@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Parish, Locale } from "@/lib/types";
-import { Chip } from "@/components/ui/Chip";
-import { ParishMap } from "@/components/map/ParishMap";
+import { TamarroSvg } from "@/components/TamarroSvg";
 
 interface ParishHeaderProps {
   parish: Parish;
@@ -13,43 +12,52 @@ interface ParishHeaderProps {
 }
 
 export function ParishHeader({ parish, locale, onBack }: ParishHeaderProps) {
+  const { tamarro } = parish;
+
   return (
-    <motion.div
-      layoutId="parish-header"
-      className="sticky top-0 z-20 border-b border-line"
+    <div
+      className="sticky top-0 z-20 border-b-2 border-ink"
       style={{
-        background: "linear-gradient(180deg, #0e0e13, #0a0a0d)",
-        height: 96,
+        background: tamarro.color,
+        boxShadow: "0 4px 0 #2a1f17",
+        minHeight: 96,
       }}
     >
-      <div className="h-full px-4 flex items-center gap-3">
+      <div className="h-full px-4 pt-[max(12px,env(safe-area-inset-top))] pb-3 flex items-center gap-3">
         <button
           onClick={onBack}
-          className="w-8 h-8 flex items-center justify-center text-ink-dim active:text-ink cursor-pointer"
+          className="w-9 h-9 flex items-center justify-center rounded-[10px] bg-paper border-2 border-ink cursor-pointer active:translate-x-[1px] active:translate-y-[1px] shrink-0"
+          style={{ boxShadow: "2px 2px 0 #2a1f17" }}
           aria-label="Tornar al mapa"
         >
-          <ChevronLeft size={20} strokeWidth={1.75} />
+          <ChevronLeft size={18} strokeWidth={2.5} className="text-ink" />
         </button>
 
-        <div className="w-9 h-9 rounded-[10px] overflow-hidden border border-accent-line bg-accent-soft shrink-0">
-          <ParishMap compact activeParish={parish.id} />
+        <div className="shrink-0">
+          <TamarroSvg color={tamarro.color} size={52} />
         </div>
 
         <div className="min-w-0 flex-1">
-          <div className="text-[9.5px] text-ink-dim font-mono tracking-[0.06em] uppercase">
-            Parròquia
+          <div className="text-[10px] font-mono text-paper opacity-80 tracking-[0.08em] uppercase">
+            Parròquia · {tamarro.id}
           </div>
-          <div className="text-[15px] font-semibold text-ink leading-tight truncate">
+          <div className="text-[17px] font-extrabold text-paper leading-tight truncate">
             {parish.name[locale]}
+          </div>
+          <div
+            className="text-[14px] text-paper opacity-80 leading-tight"
+            style={{ fontFamily: "var(--font-caveat), cursive" }}
+          >
+            {tamarro.bio[locale]}
           </div>
         </div>
 
         {parish.weather && (
-          <div className="text-[11px] font-mono text-ink-dim shrink-0">
+          <div className="text-[12px] font-mono text-paper opacity-90 shrink-0">
             {parish.weather.temp}°C
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }

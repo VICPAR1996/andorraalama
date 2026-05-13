@@ -4,6 +4,11 @@
   "slogan": { "ca": "Al cor de Grandvalira", "es": "En el corazón de Grandvalira", "en": "At the heart of Grandvalira", "fr": "Au cœur de Grandvalira" },
   "population": 4813,
   "area_km2": 121,
+  "tamarro": {
+    "id": "nilo",
+    "color": "#f0a020",
+    "bio": { "ca": "Esportista nat, amb esquís sempres a punt a Grandvalira.", "es": "Deportista nato, con esquís siempre listos en Grandvalira.", "en": "Born athlete, always ski-ready at Grandvalira.", "fr": "Sportif né, toujours prêt à skier à Grandvalira." }
+  },
   "comu": {
     "name": "Comú de Canillo",
     "url": "https://www.canillo.ad",

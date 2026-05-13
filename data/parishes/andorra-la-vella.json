@@ -5,6 +5,11 @@
   "population": 22886,
   "area_km2": 12,
   "capital": true,
+  "tamarro": {
+    "id": "andy",
+    "color": "#e8743b",
+    "bio": { "ca": "El rei de la capital, amb energia i molt de bulla.", "es": "El rey de la capital, con energía y mucha fiesta.", "en": "The capital's king, full of energy and fun.", "fr": "Le roi de la capitale, plein d'énergie." }
+  },
   "comu": {
     "name": "Comú d'Andorra la Vella",
     "url": "https://www.andorralavella.ad",

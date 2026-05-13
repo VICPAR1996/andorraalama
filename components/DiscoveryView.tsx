@@ -6,7 +6,7 @@ import { ParishId, Locale } from "@/lib/types";
 import { ParishMap } from "@/components/map/ParishMap";
 import { BrandLockup } from "@/components/shell/BrandLockup";
 import { LanguageSwitch } from "@/components/shell/LanguageSwitch";
-import { ease, dur } from "@/lib/motion";
+import { dur, ease } from "@/lib/motion";
 
 interface DiscoveryViewProps {
   onSelect: (id: ParishId) => void;
@@ -28,7 +28,7 @@ export function DiscoveryView({ onSelect, locale, onLocaleChange }: DiscoveryVie
       className="fixed inset-0 flex flex-col"
       style={{
         background:
-          "radial-gradient(1000px 600px at 70% -5%, oklch(72% 0.16 245 / 0.12), transparent 60%), #0a0a0b",
+          "radial-gradient(circle at 12% 8%, rgba(232,116,59,0.10), transparent 35%), radial-gradient(circle at 88% 18%, rgba(74,137,168,0.08), transparent 30%), #f6efe0",
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -42,7 +42,7 @@ export function DiscoveryView({ onSelect, locale, onLocaleChange }: DiscoveryVie
       </div>
 
       {/* map */}
-      <div className="absolute inset-0 flex items-center justify-center px-8">
+      <div className="absolute inset-0 flex items-center justify-center px-6 pt-28 pb-20">
         <div className="w-full max-w-[420px] aspect-[400/320]">
           <ParishMap onSelect={onSelect} />
         </div>
@@ -50,12 +50,20 @@ export function DiscoveryView({ onSelect, locale, onLocaleChange }: DiscoveryVie
 
       {/* hint pill */}
       <motion.div
-        className="absolute bottom-[max(40px,env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2"
-        animate={{ y: bobbing ? -2 : 2 }}
-        transition={{ duration: 1.6, ease: "easeInOut" }}
+        className="absolute bottom-[max(36px,env(safe-area-inset-bottom))] left-1/2 -translate-x-1/2"
+        animate={{ y: bobbing ? -3 : 3 }}
+        transition={{ duration: 1.8, ease: "easeInOut" }}
       >
-        <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-line bg-white/5 backdrop-blur-xl text-[12px] font-medium text-ink whitespace-nowrap">
-          Selecciona una parròquia ↑
+        <div
+          className="flex items-center gap-2 px-4 py-2.5 rounded-full border-2 border-ink text-[13px] font-bold text-ink whitespace-nowrap"
+          style={{
+            background: "#fbf6e8",
+            boxShadow: "3px 3px 0 #2a1f17",
+            fontFamily: "var(--font-caveat), cursive",
+            fontSize: "18px",
+          }}
+        >
+          Toca una parròquia 👇
         </div>
       </motion.div>
     </motion.div>
